@@ -2,12 +2,11 @@ import java.util.Random;
 
 public class Main
 {
-    public static int[][] flp_md(int xLength, int yWidth)
+    public static int[][] flp_md(int xLength, int yWidth, int maxDistance)
     {
         Random r = new Random();
         int numberOfExecutions = 1;
         int exceeding_maxDistance = 0;
-        int maxDistance = 4;
         int distance;
         int[][] Dist = new int[xLength][yWidth];
         
@@ -53,12 +52,13 @@ public class Main
     public static void main(String[] args)
     {
        
+        int maxDistance = 4;
         int xLength2 = 5;
         int yWidth2 = 5;
         
         int[][] m2 = new int[yWidth2][xLength2];
 
-        m2 = flp_md(xLength2, yWidth2);
+        m2 = flp_md(xLength2, yWidth2, maxDistance);
 
         for (int i = 0; i < xLength2; i++) {
             for (int j = 0; j < yWidth2; j++) {
