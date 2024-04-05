@@ -1,6 +1,5 @@
 # The facility location problem with maximum distance constraint - FLP_MD 
 
-Formulation of the FLP-MD
 In the FLP-MD, we are given a set of facilities F and a set of customers D.
 The distance between facility i and customer j is dij, for any i ∈ F , j ∈ D.
 
