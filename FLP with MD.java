@@ -10,14 +10,18 @@ public class Main
         int distance;
         int[][] Dist = new int[xLength][yWidth];
         
-        int[] xCordinates = new int[2];
-        int[] yCordinates = new int[2];
+        int[] xCordinates = new int[4];
+        int[] yCordinates = new int[4];
         
      do{
-            xCordinates[0] = r.nextInt(5) + 1;
-            yCordinates[0] = r.nextInt(5) + 1;
-            xCordinates[1] = r.nextInt(5) + 1;
-            yCordinates[1] = r.nextInt(5) + 1;
+            xCordinates[0] = r.nextInt(10);
+            yCordinates[0] = r.nextInt(10);
+            xCordinates[1] = r.nextInt(10);
+            yCordinates[1] = r.nextInt(10);
+            xCordinates[2] = r.nextInt(10);
+            yCordinates[2] = r.nextInt(10);
+            xCordinates[3] = r.nextInt(10);
+            yCordinates[3] = r.nextInt(10);
 
             exceeding_maxDistance = 0;
             
@@ -26,7 +30,7 @@ public class Main
                     Dist[x][y] = xLength + yWidth;
 
                     for (int i = 0; i < xCordinates.length; i++){
-                        distance = Math.abs( xCordinates[i] - (x + 1) ) + Math.abs( yCordinates[i] - (y + 1) );
+                        distance = Math.abs( xCordinates[i] - x ) + Math.abs( yCordinates[i] - y );
                         Dist[x][y] = Dist[x][y] > distance ? distance :  Dist[x][y];
                     }
                     
@@ -51,10 +55,9 @@ public class Main
 
     public static void main(String[] args)
     {
-       
-        int maxDistance = 4;
-        int xLength2 = 5;
-        int yWidth2 = 5;
+        int maxDistance = 5;
+        int xLength2 = 10;
+        int yWidth2 = 10;
         
         int[][] m2 = new int[yWidth2][xLength2];
 
@@ -62,7 +65,7 @@ public class Main
 
         for (int i = 0; i < xLength2; i++) {
             for (int j = 0; j < yWidth2; j++) {
-                System.out.print(m2[i][j]);
+                System.out.print(m2[i][j] + " ");
             }
             
             System.out.println();
